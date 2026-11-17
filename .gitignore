@@ -1,0 +1,26 @@
+# Python / ML
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/
+
+# Large artifacts: download/reproduce locally, do not commit
+*.zip
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.ckpt
+wandb/
+runs/
+hf_cache/
+
+# Keep small research results, omit bulky model checkpoints
+track1_acrobot/results/*/seed_*/model.zip
+track3_countdown_grpo/outputs/
+track3_countdown_grpo/results/checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db

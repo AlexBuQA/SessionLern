@@ -1,0 +1,7 @@
+condition,noise,mean_return,return_std_between_seeds,success_rate,success_std_between_seeds,mean_steps,seeds
+fixed,0.0,-500.0,0.0,0.0,0.0,500.0,1
+fixed,0.5,-500.0,0.0,0.0,0.0,500.0,1
+random,0.0,-500.0,0.0,0.0,0.0,500.0,1
+random,0.5,-500.0,0.0,0.0,0.0,500.0,1
+randomized,0.0,-500.0,0.0,0.0,0.0,500.0,1
+randomized,0.5,-500.0,0.0,0.0,0.0,500.0,1

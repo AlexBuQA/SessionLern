@@ -1,0 +1,4 @@
+step,mean_return,std_return,success_rate,condition,seed
+0,-500.0,0.0,0.0,randomized,11
+2500,-500.0,0.0,0.0,randomized,11
+5000,-500.0,0.0,0.0,randomized,11

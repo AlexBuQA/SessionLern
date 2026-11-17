@@ -1,0 +1,7 @@
+condition,seed,noise,mean_return,success_rate,mean_steps,episodes
+fixed,11,0.0,-500.0,0.0,500.0,2
+fixed,11,0.5,-500.0,0.0,500.0,2
+random,11,0.0,-500.0,0.0,500.0,2
+random,11,0.5,-500.0,0.0,500.0,2
+randomized,11,0.0,-500.0,0.0,500.0,2
+randomized,11,0.5,-500.0,0.0,500.0,2

@@ -1,0 +1,10 @@
+torch==2.15.0
+trl==1.18.0
+transformers==5.23.0
+peft==0.21.3
+datasets==5.2.0
+accelerate==1.16.0
+numpy==2.5.5
+pandas==3.1.1
+matplotlib==3.11.2
+pytest==9.2.0

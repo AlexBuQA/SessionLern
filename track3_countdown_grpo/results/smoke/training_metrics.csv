@@ -1,0 +1,5 @@
+condition,seed,step,reward,kl,mean_response_tokens,train_strict_accuracy,train_exploit_rate
+strict,42,1,0.0,0.0,18.5,0.0,0.0
+strict,42,2,0.0,0.0,16.25,0.0,0.0
+naive,42,1,0.0,0.0,18.5,0.0,0.0
+naive,42,2,0.0,0.0,16.25,0.0,0.0

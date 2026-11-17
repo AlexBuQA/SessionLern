@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "seed": 20261117,
+    "train_size": 1200,
+    "test_size": 240,
+    "three_number_fraction": 0.7,
+    "min_number": 2,
+    "max_number_3": 18,
+    "max_number_4": 12,
+    "max_target": 200
+  },
+  "train_size": 1200,
+  "test_size": 240,
+  "overlap_count": 0,
+  "generation_attempt_note": "Only provably solvable, non-trivial, globally unique puzzles are retained."
+}

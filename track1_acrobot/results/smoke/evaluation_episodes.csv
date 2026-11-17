@@ -1,0 +1,13 @@
+return,steps,success,episode_seed,applied_noise,noise,episode,condition,seed
+-500.0,500,False,200000,0.0,0.0,0,fixed,11
+-500.0,500,False,200001,0.0,0.0,1,fixed,11
+-500.0,500,False,250000,0.5,0.5,0,fixed,11
+-500.0,500,False,250001,0.5,0.5,1,fixed,11
+-500.0,500,False,200000,0.0,0.0,0,randomized,11
+-500.0,500,False,200001,0.0,0.0,1,randomized,11
+-500.0,500,False,250000,0.5,0.5,0,randomized,11
+-500.0,500,False,250001,0.5,0.5,1,randomized,11
+-500.0,500,False,200000,0.0,0.0,0,random,11
+-500.0,500,False,200001,0.0,0.0,1,random,11
+-500.0,500,False,250000,0.5,0.5,0,random,11
+-500.0,500,False,250001,0.5,0.5,1,random,11

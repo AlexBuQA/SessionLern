@@ -1,0 +1,4 @@
+condition,seed,step,n_tasks,accuracy,naive_accuracy,exploit_rate,format_rate,syntax_rate,numbers_ok_rate,mean_response_tokens,mean_response_chars,base_model,adapter,decoding,python,packages,gpu_name,accuracy_mean,accuracy_std,naive_accuracy_mean,naive_accuracy_std,exploit_rate_mean,exploit_rate_std,format_rate_mean,format_rate_std,numbers_ok_rate_mean,numbers_ok_rate_std,mean_response_tokens_mean,mean_response_tokens_std
+base,0.0,0.0,8.0,0.0,0.0,0.0,1.0,0.875,0.875,15.75,27.875,Qwen/Qwen3-0.6B,,greedy,3.13.6,"{'torch': '2.15.0+cpu', 'transformers': '5.23.0', 'peft': '0.21.3'}",,,,,,,,,,,,,
+naive,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.875,0.0,15.75,0.0
+strict,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.875,0.0,15.75,0.0

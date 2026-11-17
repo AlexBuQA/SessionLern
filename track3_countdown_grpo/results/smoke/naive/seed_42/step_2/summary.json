@@ -1,0 +1,24 @@
+{
+  "condition": "naive",
+  "seed": 42,
+  "step": 2,
+  "n_tasks": 8,
+  "accuracy": 0.0,
+  "naive_accuracy": 0.0,
+  "exploit_rate": 0.0,
+  "format_rate": 1.0,
+  "syntax_rate": 0.875,
+  "numbers_ok_rate": 0.875,
+  "mean_response_tokens": 15.75,
+  "mean_response_chars": 27.875,
+  "base_model": "Qwen/Qwen3-0.6B",
+  "adapter": "C:\\Users\\buzhor_aa\\Downloads\\rl-session-assignment\\track3_countdown_grpo\\outputs\\smoke\\naive\\seed_42\\checkpoint-2",
+  "decoding": "greedy",
+  "python": "3.13.6",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "transformers": "5.23.0",
+    "peft": "0.21.3"
+  },
+  "gpu_name": null
+}

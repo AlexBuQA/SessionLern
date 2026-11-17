@@ -1,0 +1,68 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Track 1 — smoke",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/track1_acrobot/run.py",
+      "cwd": "${workspaceFolder}/track1_acrobot",
+      "args": ["--config", "configs/smoke.json", "--output", "results/smoke"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Track 1 — full research",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/track1_acrobot/run.py",
+      "cwd": "${workspaceFolder}/track1_acrobot",
+      "args": ["--config", "configs/full.json", "--output", "results/full"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Track 2 — smoke",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/track2_inventory/run.py",
+      "cwd": "${workspaceFolder}/track2_inventory",
+      "args": ["--config", "configs/smoke.json", "--output", "results/smoke"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Track 2 — full research",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/track2_inventory/run.py",
+      "cwd": "${workspaceFolder}/track2_inventory",
+      "args": ["--config", "configs/full.json", "--output", "results/full"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Track 3 — generate and test data",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "countdown_rl.data",
+      "cwd": "${workspaceFolder}/track3_countdown_grpo",
+      "args": ["--config", "configs/full.json"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Track 3 — GRPO smoke (GPU recommended)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/track3_countdown_grpo/run.py",
+      "cwd": "${workspaceFolder}/track3_countdown_grpo",
+      "args": ["--config", "configs/smoke.json", "--output", "results/smoke", "--outputs", "outputs/smoke"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Track 3 — GRPO full research (GPU)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/track3_countdown_grpo/run.py",
+      "cwd": "${workspaceFolder}/track3_countdown_grpo",
+      "args": ["--config", "configs/full.json", "--output", "results/full", "--outputs", "outputs/full"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "seeds": [11, 22, 33],
+  "episodes": 30000,
+  "horizon": 30,
+  "alpha": 0.15,
+  "gamma": 0.95,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_fraction": 0.8,
+  "training_demand_mean": 6.0,
+  "randomization_range": [3.0, 9.0],
+  "learning_eval_interval": 1000,
+  "learning_eval_episodes": 10,
+  "eval_episodes": 50,
+  "eval_demand_means": [3.0, 6.0, 9.0, 12.0, 15.0],
+  "base_stock_target": 15,
+  "trajectory_demand_mean": 12.0
+}
