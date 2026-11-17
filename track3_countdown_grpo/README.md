@@ -4,7 +4,9 @@
 
 ## Статус результатов
 
-Генератор, отложенная выборка и юнит-тесты можно проверить на CPU. Полное GRPO-обучение рассчитано на Colab T4 или локальный CUDA GPU и **не выдаётся за уже выполненное**: численный отчёт появляется только после реального запуска. Текущий статус указан в `RESULTS.md`.
+**Исследование выполнено на Colab Tesla T4 в FP16.** Отчёт: [RESULTS.md](RESULTS.md); исходные таблицы, ответы и графики: [results/deadline](results/deadline/). Получено 6 обучающих запусков (strict/naive × seed 42, 43, 44) по 50 шагов GRPO; базовая модель и чекпоинты 25/50 оценены на одних 240 отложенных задачах.
+
+Короткий исследовательский протокол `deadline` показал reward hacking: naive-награда 99,44 %, строгая точность naive-модели 0 %; strict-точность 18,61 % против 16,67 % у базовой модели. Исходный протокол на 300 шагов сохранён отдельно в `configs/full.json`.
 
 ## Подготовка в VS Code
 
@@ -19,7 +21,15 @@ python -m countdown_rl.data --config configs/full.json
 pytest -q
 ```
 
-## Полный эксперимент
+## Воспроизведение выполненного эксперимента
+
+В Colab откройте `Countdown_GRPO_Colab.ipynb`, подключите T4 и выберите `MODE = 'deadline'`. Локально на CUDA GPU:
+
+```powershell
+python run.py --config configs/deadline.json --output results/deadline --outputs outputs/deadline
+```
+
+## Исходный расширенный протокол
 
 ```powershell
 python run.py --config configs/full.json --output results/full --outputs outputs/full

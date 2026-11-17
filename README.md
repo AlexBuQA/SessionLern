@@ -27,9 +27,9 @@ python run.py --config configs/smoke.json --output results/smoke
 
 - Инструкция и отчёт трека 1: `track1_acrobot/README.md`, `track1_acrobot/results/full/RESULTS.md`.
 - Инструкция и отчёт трека 2: `track2_inventory/README.md`, `track2_inventory/results/full/RESULTS.md`.
-- Инструкция трека 3: `track3_countdown_grpo/README.md`.
+- Инструкция и итоговый отчёт трека 3: `track3_countdown_grpo/README.md`, `track3_countdown_grpo/RESULTS.md`.
 
-**Важно:** третий трек содержит полный обучающий и оценочный pipeline, фиксированный датасет и 19 автоматических проверок, но фактическое GRPO-обучение требует GPU. Оно не представлено как выполненное на CPU. Запустите `Countdown_GRPO_Colab.ipynb` на T4 или локальный `run.py`; только после этого появятся численные результаты.
+**Третий трек выполнен на Colab Tesla T4 в FP16:** 6 запусков GRPO (strict/naive × 3 seed) по 50 шагов, 13 оценок на 240 отложенных задачах. Отчёт, четыре графика, таблицы и ответы сохранены в `track3_countdown_grpo/results/deadline`. Для повторения используйте `Countdown_GRPO_Colab.ipynb` с режимом `deadline`; исходный протокол на 300 шагов сохранён в `configs/full.json`.
 
 ## Проверка всего проекта
 
@@ -42,7 +42,7 @@ python validate_results.py --require-full
 python package_project.py
 ```
 
-Smoke-конфигурации проверяют сквозной pipeline. Научические выводы делаются только по `results/full`, не по smoke.
+Smoke-конфигурации проверяют сквозной pipeline. Научические выводы делаются по `results/full` в треках 1–2 и по `results/deadline` в треке 3, но не по smoke.
 
 ## Воспроизводимость
 

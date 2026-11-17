@@ -1,0 +1,24 @@
+{
+  "condition": "naive",
+  "seed": 44,
+  "step": 50,
+  "n_tasks": 240,
+  "accuracy": 0.0,
+  "naive_accuracy": 0.9833333333333333,
+  "exploit_rate": 0.9833333333333333,
+  "format_rate": 1.0,
+  "syntax_rate": 1.0,
+  "numbers_ok_rate": 0.004166666666666667,
+  "mean_response_tokens": 12.0875,
+  "mean_response_chars": 23.154166666666665,
+  "base_model": "Qwen/Qwen3-0.6B",
+  "adapter": "/content/SessionLern/track3_countdown_grpo/outputs/deadline/naive/seed_44/checkpoint-50",
+  "decoding": "greedy",
+  "python": "3.13.16",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.23.0",
+    "peft": "0.21.3"
+  },
+  "gpu_name": "Tesla T4"
+}

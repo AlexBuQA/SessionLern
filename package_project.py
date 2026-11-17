@@ -7,8 +7,10 @@ from pathlib import Path
 
 def should_include(path: Path, root: Path) -> bool:
     relative = path.relative_to(root)
-    excluded_dirs = {".venv", ".git", "__pycache__", ".pytest_cache", "outputs", ".ipynb_checkpoints"}
+    excluded_dirs = {".venv", ".git", "__pycache__", ".pytest_cache", "outputs", ".ipynb_checkpoints", "verification"}
     if any(part in excluded_dirs for part in relative.parts):
+        return False
+    if len(relative.parts) == 1 and (path.name.startswith("terminal-log") or path.name.startswith("colab-")):
         return False
     if path.suffix.lower() in {".zip", ".pyc", ".pt", ".pth", ".safetensors", ".bin", ".ckpt"}:
         return False
