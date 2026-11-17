@@ -32,8 +32,10 @@ def main() -> None:
     from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
 
     set_seed(20261117)
-    use_bf16 = bool(torch.cuda.is_available() and torch.cuda.is_bf16_supported())
-    dtype = torch.bfloat16 if use_bf16 else (torch.float16 if torch.cuda.is_available() else torch.float32)
+    cuda = torch.cuda.is_available()
+    major = torch.cuda.get_device_capability(0)[0] if cuda else 0
+    use_bf16 = bool(cuda and major >= 8 and torch.cuda.is_bf16_supported())
+    dtype = torch.bfloat16 if use_bf16 else (torch.float16 if cuda else torch.float32)
     tokenizer = AutoTokenizer.from_pretrained(args.base_model)
     tokenizer.padding_side = "left"
     if tokenizer.pad_token is None:

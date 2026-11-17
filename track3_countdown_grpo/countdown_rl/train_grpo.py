@@ -33,8 +33,10 @@ def main() -> None:
         print("WARNING: GRPO is running on CPU; use Colab T4 or another CUDA GPU for the full study.", flush=True)
     set_seed(args.seed)
     torch.set_float32_matmul_precision("high")
-    use_bf16 = bool(torch.cuda.is_available() and torch.cuda.is_bf16_supported())
-    use_fp16 = bool(torch.cuda.is_available() and not use_bf16)
+    cuda = torch.cuda.is_available()
+    major = torch.cuda.get_device_capability(0)[0] if cuda else 0
+    use_bf16 = bool(cuda and major >= 8 and torch.cuda.is_bf16_supported())
+    use_fp16 = bool(cuda and not use_bf16)
     dtype = torch.bfloat16 if use_bf16 else (torch.float16 if use_fp16 else torch.float32)
 
     tokenizer = AutoTokenizer.from_pretrained(config["model"])
